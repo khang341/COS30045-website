@@ -1,13 +1,21 @@
-function showPage(pageId) {
-  const pages = document.querySelectorAll(".page");
-  const navItems = document.querySelectorAll(".nav-links li");
-
-  pages.forEach(page => page.classList.add("hidden"));
-  navItems.forEach(item => item.classList.remove("active"));
-
-  document.getElementById(pageId).classList.remove("hidden");
-  document.getElementById("nav-" + pageId).classList.add("active");
+function goHome() {
+  window.location.href = "index.html";
 }
 
-// default page
-showPage("home");
+function goPage(page) {
+  if (page === "home") window.location.href = "index.html";
+  if (page === "tv") window.location.href = "televisions.html";
+  if (page === "about") window.location.href = "about.html";
+}
+
+const path = window.location.pathname;
+
+if (path.includes("index")) {
+  document.getElementById("nav-home").style.backgroundColor = "rgba(255,255,255,0.3)";
+}
+if (path.includes("televisions")) {
+  document.getElementById("nav-tv").style.backgroundColor = "rgba(255,255,255,0.3)";
+}
+if (path.includes("about")) {
+  document.getElementById("nav-about").style.backgroundColor = "rgba(255,255,255,0.3)";
+}
