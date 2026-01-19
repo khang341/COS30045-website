@@ -20,6 +20,7 @@ body {
   cursor: pointer;
   font-size: 22px;
   font-weight: bold;
+
 }
 
 .logo img {
@@ -33,6 +34,7 @@ body {
   gap: 25px;
   margin: 0;
   padding: 0;
+  
 }
 
 .nav-links li {
